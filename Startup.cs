@@ -30,7 +30,7 @@ namespace Kolokwium_2
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<KolokwiumContext>(opt => opt.UseSqlServer(Configuration.GetConnectionString("Default")));
-            services.AddScoped<IAlbumService, AlbumService>();
+            services.AddScoped<ITeamService, TeamService>();
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
